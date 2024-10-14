@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+    body {
+        background-image: linear-gradient(-45deg, #F24B78, #A672A2, #04D9D9, #F2F2F2);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+    }
+    h1 {
+        color: rgb(241, 69, 213);
+    }
+    h2 {
+        color: rgba(252, 249, 251, 0.856);
+    }
+    p {
+        text-align: justify; font-size: smaller;
+        color: white;
+        
+    }
+    a {
+        font-size: smaller;
+    }
+        

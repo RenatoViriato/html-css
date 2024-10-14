@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+
+</head>
+<style>
+/* Estiliza o contêiner para as imagens */
+.container-images {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se necessário */
+    gap: 20px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centraliza as imagens */
+    margin: 20px;
+    
+}
+
+/* Estiliza as imagens */
+.container-images img {
+    width: 200px; /* Define a largura das imagens */
+    height: auto; /* Mantém a proporção original */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 20px 30px rgba(33, 27, 126, 0.938); /* Sombra leve nas imagens */
+    transition: transform 1s ease; /* Adiciona um efeito ao passar o mouse */
+    
+}
+body {
+    background: linear-gradient(100deg, #F24B78, #A672A2, #04D9D9, #F2F2F2);
+}
+.container-images img:hover {
+    transform: scale(1.05);} /* Aumenta levemente a imagem ao passar o mouse */
+    h1 {
+        color: blue
+        
+    }
+</style>
+<body>
+    <h1>Convites personalizados</h1>
+    <div class="container-images">
+       <img src="Imagem do WhatsApp de 2024-10-03 à(s) 00.02.31_f75ee8cc.jpg" alt="">
+       <img src="Imagem do WhatsApp de 2024-10-03 à(s) 00.03.01_776d6f6f.jpg" alt="">
+       <img src="Imagem do WhatsApp de 2024-10-03 à(s) 00.03.42_6edb8c5b.jpg" alt="">
+       <img src="Imagem do WhatsApp de 2024-10-03 à(s) 00.04.09_63cd2cec.jpg" alt="">
+       <img src="Imagem do WhatsApp de 2024-10-03 à(s) 00.04.48_92b37930.jpg" alt="">
+       <img src="Imagem do WhatsApp de 2024-10-03 à(s) 00.05.20_aeb212a7.jpg" alt="">
+    </div>
+</body>
+
+<script>
+    // Seleciona todas as imagens dentro da galeria
+    const images = document.querySelectorAll('#imageGallery img');
+
+    // Itera sobre cada imagem e adiciona um evento de clique
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            // Alterna a largura da imagem entre 150px e 300px ao clicar
+            if (this.style.width === '300px') {
+                this.style.width = '150px'; // Reduz para 150px
+            } else {
+                this.style.width = '300px'; // Aumenta para 300px
+            }
+            this.style.height = 'auto'; // Mantém a proporção
+        });
+    });
+</script>
+</html>
